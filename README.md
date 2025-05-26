@@ -1,5 +1,5 @@
 # Arduino - Sistem za razbudjivanje vozača
-Napravljeno u sklopu projekta za predmeta **Računarske Arhitekture**.
+Napravljeno u sklopu projekta iz predmeta **Računarske Arhitekture**.
 
 Tehnologije koristene:
   - Arduino UNO R3 + prateća oprema iz **"Arduino Starter Kit"**.
