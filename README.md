@@ -1,7 +1,7 @@
 # Arduino - Sistem za razbudjivanje vozača
 Napravljeno u sklopu projekta iz predmeta **Računarske Arhitekture**.
 
-Tehnologije koristene:
+Tehnologije korištene:
   - Arduino UNO R3 + prateća oprema iz **"Arduino Starter Kit"**.
   - Arduino IDE + .ino project file za slanje sketcha na Arduino.
   - **Python + MediaPipe** za praćenje stanja vozača.
