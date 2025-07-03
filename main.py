@@ -24,17 +24,17 @@ time.sleep(2)
 
 # Hvala Mediapipe inzinjerima za ovaj code koji sljedi
 
-# Mediapipe face mesh
+# Mediapipe mesh za facu
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1)
 
-# EAR threshold and frame counters
+# EAR
 EAR_THRESHOLD = 0.2
 POSPAN_FRAMES = 15
 frame_counter = 0
 status = "budan"
 
-# Mediapipe index numbers
+# Mediapipe index brojevi
 LEFT_EYE = [33, 160, 158, 133, 153, 144]
 RIGHT_EYE = [362, 385, 387, 263, 373, 380]
 
@@ -61,7 +61,7 @@ def send_to_arduino(poruka):
     arduino.write((poruka + "\n").encode())
     print(f"[Poruka za Arduino] {poruka}")
 
-# Start webcam
+# Upaliti kameru
 cap = cv2.VideoCapture(0)
 
 while cap.isOpened():
@@ -92,7 +92,7 @@ while cap.isOpened():
                 status = "budan"
             frame_counter = 0
 
-        # Display info
+        # Ispis informacija na ekran
         cv2.putText(frame, f"EAR: {avg_ear:.2f}", (30, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
         cv2.putText(frame, f"Status: {status}", (30, 60),
